@@ -1,0 +1,31 @@
+development:
+  adapter:  postgis
+  host: <%= ENV['DATABASE_HOST'] %>
+  encoding: unicode
+  database: <%= ENV['DATABASE'] %>
+  pool:     10
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+  template: template0
+
+production:
+  adapter:  postgis
+  host: <%= ENV['DATABASE_HOST'] %>
+  encoding: unicode
+  database: <%= ENV['DATABASE'] %>
+  pool:     1
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+
+test:
+  adapter:  postgis
+  host: <%= ENV['DATABASE_HOST'] %>
+  encoding: unicode
+  database: <%= ENV['DATABASE_TEST'] %>
+  pool:     10
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+  template: template0

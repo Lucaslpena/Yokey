@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - IEDGroup@localhost" uuid="ca10cded-45bd-4f29-bba6-f832fead3f49">
+      <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>memory</secret-storage>
+      <user-name>Lucian</user-name>
+    </data-source>
+    <data-source name="PostgreSQL - IEDGroupTest@localhost" uuid="7ac47862-acae-4ae7-bdb4-fc132787b9ae">
+      <database-info product="PostgreSQL" version="9.5.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>memory</secret-storage>
+      <user-name>Lucian</user-name>
+      <resolve-scope>IEDGroupTest:public</resolve-scope>
+    </data-source>
+  </component>
+</project>

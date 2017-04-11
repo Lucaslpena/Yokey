@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="web-style.css" rel="stylesheet">
+
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <img class="pull-left" src="images/logo.png">
+                    <a class="navbar-brand" href="#section1">Yokey</a>
+
+                    <button id="login" type="button"class="btn btn btn-default hidden-sm hidden-md hidden-lg navbar-header" data-toggle="modal" data-target="#myModal">Login</button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1">Overview</a></li>
+                        <li><a href="#section2">Service</a></li>
+                        <li><a href="#section3">Contact</a></li>
+                    </ul>
+                    <button id="login" type="button"class="btn navbar-header pull-right hidden-xs" data-toggle="modal" data-target="#myModal" style="margin-top:9px;">Login</button>
+
+                </div>
+            </div>
+        </nav>
+        <div class="shadow">
+		</div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog  modal-medium hidden-xs hidden-sm image-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login with your instagram account</h4>
+                    </div>
+                    <div class="modal-body">
+                          <p>To be part of the Yokey community, login with your instagram account and start tagging the monkey!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog modal-sm hidden-md hidden-lg image-m ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login with your instagram account</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>To be part of the Yokey community, login with your instagram account and start tagging the monkey!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid back-slider">
+            <div  id="section1" class="row">
+                <div class="col-md-6 image-home">
+                    <img class="hidden-sm hidden-md hidden-lg img-responsive center-block img-xsm" alt="logo" src="images/monkey_overview.png"/>
+                    <img class="hidden-xs img-responsive img-m center-block" src="images/monkey_overview.png"/>
+                </div>
+                <div class="col-md-6 col-md-6 hidden-xs hidden-sm slider-text ">
+                    <br><br>
+                        <img class="hidden-xs img-responsive img-m" src="images/example.gif"/>
+                        <p class="lead">Tag your Instagram pictures with  #{monkey}.
+                            <br><br>
+                            Add a few more emojis to describe what the location in your picture is all about.
+                            <br><br>
+                            On messenger, ask Yokey to search for other social network pictures tagged with similar hashtag combinations, to find results for interesting places to go to.
+                        </p>
+                </div>
+                <div class="col-md-6 col-md-6 hidden-md hidden-lg slider-text-centered center-block">
+                    <img class="image-sm img-responsive center-block"  src="images/example.gif"/>
+                    <p class="lead">Tag your Instagram pictures with  #{monkey}.
+                        <br><br>
+                        Add a few more emojis to describe what the location in your picture is all about.
+                        <br><br>
+                        On messenger, ask Yokey to search for other social network pictures tagged with similar hashtag combinations, to find results for interesting places to go to.
+                    </p>
+                </div>
+            </div>
+    </div>
+    <div id= "section2_container"class="container-fluid back-slider2">
+            <div id="section2" class="row">
+                <div class="col-md-6 hidden-xs hidden-sm slider-text-2">
+                    <br><br>
+                    <h1 class="page-title">Service</h1>
+                    <p class="lead">Yokey sums up social network posts and give you personalized search results relative to your search command. No downloads, no subscriptions.<br>
+                    Tag your pictures with the monkey emoji and join our community!</p>
+                    <img class="hidden-xs img-responsive img-m" src="images/gif-give.gif"/>
+                </div>
+                <div class="col-md-6 hidden-md hidden-lg slider-text-centered ">
+                    <h1 class="page-title">Service</h1>
+                    <p class="lead">Yokey sums up social network posts and give you personalized search results relative to your search command. No downloads, no subscriptions.<br>
+                    Tag your pictures with the monkey emoji and join our community!</p>
+                    <img class="image-sm img-responsive center-block"  src="images/gif-give.gif"/>
+                </div>
+
+
+             <div class="col-md-6 image-home">
+                    <img class="hidden-sm hidden-md hidden-lg img-responsive center-block img-sm" alt="logo" src="images/chat1.gif"/>
+                    <img class="hidden-xs img-responsive center-block img-m" src="images/chat1.gif"/>
+                </div>
+
+
+            </div>
+    </div>
+
+        <div id="section3" class="container-fluid contact">
+            <h1 class= "contact-text">lucaslorenzopena@ied.edu</h1>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+              // Add scrollspy to <body>
+              $('body').scrollspy({target: ".navbar", offset: 0});
+
+              // Add smooth scrolling on all links inside the navbar
+              $("#myNavbar a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+                  // Store hash
+                  var hash = this.hash;
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                }  // End if
+              });
+            });
+           $(document).ready(function(){
+                $("#login").click(function(){
+                    $("#myModal").show();
+                });
+           });
+            
+      
+        </script>
+    </body>
+</html>

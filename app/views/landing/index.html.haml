@@ -1,0 +1,165 @@
+-# bootstrap check
+-#                    keep this>>>
+-#= link_to "Signout", destroy_user_session_path, method: :delete
+-#= link_to "Login with Instagram", "https://api.instagram.com/oauth/authorize/?client_id=9766082e82d2426cb14ed73dc4f71a22&redirect_uri=https://2ab4b030.ngrok.io/users/auth/instagram&response_type=code"
+
+
+-#NAV HERE
+
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      = button_tag( class:"navbar-toggle", "data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button" ) do
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      =image_tag("logo.png", class: 'pull-left')
+      %a.navbar-brand{:href => "#section1"} Yokey
+      = button_tag( "Connect", id: "login", class:"login btn btn-default hidden-sm hidden-md hidden-lg navbar-header", "data-target" => "#myModal", "data-toggle" => "modal", :type => "button" )
+    #myNavbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => "#section1"} Home
+        %li
+          %a{:href => "#section2"} Overview
+        %li
+          %a{:href => "#section3"} Service
+        %li
+          %a{:href => "#section4"} Contact
+      =button_tag( "Connect", id: "login", class:"login btn navbar-header pull-right hidden-xs", "data-target" => "#myModal", "data-toggle" => "modal", :type => "button", style: "margin-top:9px;" )
+
+.shadow
+#myModal.modal.fade{:role => "dialog"}
+  .modal-dialog.modal-medium.hidden-xs.hidden-sm.image-sm
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} &times;
+        %h4.modal-title Connect your instagram account
+      .modal-body
+        %p.static To be part of the Yokey community, connect your instagram account and start tagging the monkey!
+        %p.loading Hang tight! We are connecting your instagram!!
+
+        = button_to( "Connect", "users/auth/instagram", id: "connect", class:"static login btn btn-default", "data-href" => "index.php", :method => :get )
+        = image_tag("loading.gif", class: "loading hidden-sm hidden-md hidden-lg img-responsive center-block img-xsm", :alt => "loading")
+        = image_tag("loading.gif", class: "loading hidden-xs img-responsive img-m center-block", :alt => "logo")
+        %br
+        = button_to( "Chat with Yokey", "https://www.facebook.com/yokeyapp/", id: "facebook", class:"btn btn-default", "data-href" => "index.php", :method => :get )
+
+
+  .modal-dialog.modal-sm.hidden-md.hidden-lg.image-m
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} &times;
+        %h4.modal-title Connect your instagram account
+      .modal-body
+        %p.static To be part of the Yokey community, connect your instagram account and start tagging the monkey!
+        %p.loading Hang tight! We are connecting your instagram!!
+
+        = button_to( "Connect", "users/auth/instagram", id: "connect", class:"static login btn btn-default", "data-href" => "index.php", :method => :get )
+        = image_tag("loading.gif", class: "loading hidden-sm hidden-md hidden-lg img-responsive center-block img-xsm", :alt => "loading")
+        = image_tag("loading.gif", class: "loading hidden-xs img-responsive img-m center-block", :alt => "logo")
+        %br
+        = button_to( "Chat with Yokey", "https://www.facebook.com/yokeyapp/", id: "facebook", class:"btn btn-default", "data-href" => "index.php", :method => :get )
+
+
+#section1.container-fluid
+  = image_tag("monkey_home.png", class: "img-responsive center-block img-s1")
+
+
+#section3_container.container-fluid.back-slider2
+  #section2.row
+    .col-md-6.hidden-xs.hidden-sm.slider-text-2
+      %br
+        %br
+          %p.lead
+            Yokey sums up social network posts and give you personalized search results relative to your search command. No downloads, no subscriptions.
+            %br
+              Tag your pictures with the monkey emoji and join our community!
+          = image_tag("example.gif", class: "hidden-xs img-responsive img-m")
+    .col-md-6.hidden-md.hidden-lg.slider-text-centered
+      %p.lead
+        Yokey sums up social network posts and give you personalized search results relative to your search command. No downloads, no subscriptions.
+        %br
+          Tag your pictures with the monkey emoji and join our community!
+      = image_tag("example.gif", class: "hidden-xs img-responsive img-m")
+    .col-md-6.image-home
+      =image_tag( "chat1.gif" ,class: "hidden-sm hidden-md hidden-lg img-responsive center-block img-sm")
+      =image_tag( "chat1.gif" ,class: "hidden-xs img-responsive center-block img-m")
+
+.container-fluid.back-slider
+  #section3.row
+    .col-md-6.image-home
+      = image_tag("monkey_overview.png", class: "hidden-sm hidden-md hidden-lg img-responsive center-block img-xsm", :alt => "logo")
+      = image_tag("monkey_overview.png", class: "hidden-xs img-responsive img-m center-block", :alt => "logo")
+
+
+    .col-md-6.col-md-6.hidden-xs.hidden-sm.slider-text
+      %br
+        %br
+          =image_tag("gif-give.gif", class: "hidden-xs img-responsive img-m")
+          %p.lead
+            Tag your Instagram pictures with  \#{monkey}.
+            %br
+            %br
+              Add a few more emojis to describe what the location in your picture is all about.
+              %br
+                %br
+                  On messenger, ask Yokey to search for other social network pictures tagged with similar hashtag combinations, to find results for interesting places to go to.
+
+    .col-md-6.col-md-6.hidden-md.hidden-lg.slider-text-centered.center-block
+      =image_tag("gif-give.gif", class: "image-sm img-responsive center-block")
+      %p.lead
+        Tag your Instagram pictures with  \#{monkey}.
+        %br
+          %br
+            Add a few more emojis to describe what the location in your picture is all about.
+            %br
+              %br
+                On messenger, ask Yokey to search for other social network pictures tagged with similar hashtag combinations, to find results for interesting places to go to.
+
+
+#section4.container-fluid.contact
+  %h1.contact-text
+    Contact:
+  %h3
+    lucaslorenzopena@ied.edu
+
+
+:javascript
+  $(document).ready(function(){
+    // Add scrollspy to
+    $('body').scrollspy({target: ".navbar", offset: 0});
+
+    // Add smooth scrolling on all links inside the navbar
+    $("#myNavbar a").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      }  // End if
+    });
+    $("#connect").click(function(e){
+      $(".loading").show();
+      $(".static").hide();
+      //e.preventDefault(); e.stopPropagation();
+      //  window.location.href = $(e.currentTarget).data().href;
+      //});
+    });
+    $("#login").click(function(){
+        $("#myModal").show();
+    });
+
+  });
